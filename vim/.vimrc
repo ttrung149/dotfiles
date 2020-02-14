@@ -5,6 +5,7 @@ filetype plugin indent on
 
 " Tab setup
 set tabstop=4
+set shiftwidth=4
 set softtabstop=4
 set expandtab
 set colorcolumn=80
@@ -71,7 +72,7 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 autocmd TextChanged,TextChangedI <buffer> silent write
 
 "UI preferences
-colorscheme sierra
+colorscheme zenburn 
 set number
 set showcmd
 set cursorcolumn
@@ -108,6 +109,18 @@ highlight SignColumn ctermbg=bg
 
 " Update sign column every quarter second
 set updatetime=250
+
+" Copy and paste from clipboard settings
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
 
 " Key bindings
 nnoremap j gj
