@@ -107,10 +107,8 @@ let g:gitgutter_override_sign_column_highlight = 1
 highlight SignColumn guibg=bg
 highlight SignColumn ctermbg=bg
 
-" Update sign column every quarter second
 set updatetime=250
 
-" Copy and paste from clipboard settings
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
 
@@ -125,3 +123,6 @@ endfunction
 " Key bindings
 nnoremap j gj
 nnoremap k gk
+
+" Miscellaneous
+set nohlsearch
