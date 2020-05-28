@@ -72,7 +72,7 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 autocmd TextChanged,TextChangedI <buffer> silent write
 
 "UI preferences
-colorscheme zenburn 
+colorscheme Atelier_EstuaryDark
 set number
 set showcmd
 set cursorcolumn
@@ -131,6 +131,14 @@ nnoremap <S-LEFT> gT
 nnoremap <S-RIGHT> gt
 nnoremap T :tabnew<CR>
 nnoremap W :tabclose<CR>
+
+" Splitting screen
+nnoremap vs :vsplit<CR>
+nnoremap hs :split<CR>
+nnoremap H <C-W>h
+nnoremap L <C-W>l
+nnoremap J <C-W>j
+nnoremap K <C-W>k
 
 " Miscellaneous
 set nohlsearch
