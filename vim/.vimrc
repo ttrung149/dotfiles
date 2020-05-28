@@ -126,6 +126,12 @@ endfunction
 nnoremap j gj
 nnoremap k gk
 
+" Quick tab change
+nnoremap <S-LEFT> gT                                                                           
+nnoremap <S-RIGHT> gt
+nnoremap T :tabnew<CR>
+nnoremap W :tabclose<CR>
+
 " Miscellaneous
 set nohlsearch
 set mouse=a
