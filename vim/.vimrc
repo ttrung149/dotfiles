@@ -68,6 +68,15 @@ endif
 
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
+" Haskell
+let g:haskell_enable_quantification = 1 
+let g:haskell_enable_recursivedo = 1   
+let g:haskell_enable_arrowsyntax = 1      
+let g:haskell_enable_pattern_synonyms = 1 
+let g:haskell_enable_typeroles = 1        
+let g:haskell_enable_static_pointers = 1  
+let g:haskell_backpack = 1                
+
 " Auto save
 autocmd TextChanged,TextChangedI <buffer> silent write
 
@@ -126,8 +135,11 @@ endfunction
 nnoremap j gj
 nnoremap k gk
 
+" Start new shell
+nnoremap SS :sh<CR>
+
 " Quick tab change
-nnoremap <S-LEFT> gT                                                                           
+nnoremap <S-LEFT> gT
 nnoremap <S-RIGHT> gt
 nnoremap T :tabnew<CR>
 nnoremap W :tabclose<CR>

@@ -36,3 +36,5 @@ git clone https://github.com/ervandew/supertab ~/.vim/bundle/supertab
 # Color scheme
 git clone https://github.com/flazz/vim-colorschemes ~/.vim/bundle/vim-colorschemes
 
+# Haskell highlighting
+git clone https://github.com/neovimhaskell/haskell-vim.git
