@@ -88,16 +88,16 @@ set cursorcolumn
 set cursorline
 filetype indent on
 
-" Syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+" Syntastic config - disabled for now
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_cpp_compiler = 'clang++'
+" let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 " Nerdtree config
 let NERDTreeMinimalUI=1
@@ -153,5 +153,15 @@ nnoremap J <C-W>j
 nnoremap K <C-W>k
 
 " Miscellaneous
-set nohlsearch
 set mouse=a
+set nohlsearch
+set relativenumber
+
+" Ctags
+set tags=./tags,tags;$HOME
+nnoremap <leader><leader> <C-]>
+nnoremap <leader>p <C-t>
+nnoremap <leader>tn :tn<CR>
+nnoremap <leader>tp :tp<CR>
+nnoremap <leader>ts :ts<CR>
+
