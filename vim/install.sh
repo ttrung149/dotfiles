@@ -40,7 +40,7 @@ git clone https://github.com/flazz/vim-colorschemes ~/.vim/bundle/vim-colorschem
 git clone https://github.com/neovimhaskell/haskell-vim.git ~/.vim/bundle/haskell-vim
 
 # fzf
-git clone https://github.com/junegunn/fzf.vim
+git clone https://github.com/junegunn/fzf.vim ~/.vim/bundle/fzf.vim
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 

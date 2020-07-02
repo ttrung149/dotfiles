@@ -101,10 +101,10 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files'
-export FZF_CTRL_T_COMMAND='rg --hidden --no-ignore --files'
+export FZF_DEFAULT_COMMAND='find -L .'
+export FZF_CTRL_T_COMMAND='find -L .'
 
 alias ls='ls -la'
 alias _source='source ~/.zshrc'
 alias zshell='vim ~/.zshrc'
-
+alias vimrc='vim ~/.vimrc'

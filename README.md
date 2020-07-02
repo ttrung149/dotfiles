@@ -2,7 +2,7 @@
 
 Personal collection of dotfiles (vimscript, zshell, etc)
 
-## Prereqs
+### Prereqs
 Have brew installed
 
 ### Install

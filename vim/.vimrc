@@ -5,6 +5,7 @@ filetype plugin indent on
 
 " fzf
 set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf
 source ~/.vim/bundle/fzf.vim/plugin/fzf.vim
 
 if executable('fzf')
