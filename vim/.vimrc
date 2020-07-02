@@ -3,6 +3,38 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" fzf
+set rtp+=/usr/local/opt/fzf
+source ~/.vim/bundle/fzf.vim/plugin/fzf.vim
+
+if executable('fzf')
+  " <C-p> or <C-t> to search files
+  nnoremap <silent> <C-f> :FZF -m<cr>
+  nnoremap <silent> <C-p> :FZF -m<cr>
+
+  " <M-p> for open buffers
+  nnoremap <silent> <M-p> :Buffers<cr>
+
+  " <M-S-p> for MRU
+  nnoremap <silent> <M-S-p> :History<cr>
+
+  " Use fuzzy completion relative filepaths across directory
+  imap <expr> <c-x><c-f> fzf#vim#complete#path('git ls-files $(git rev-parse --show-toplevel)')
+
+  " Better command history with q:
+  command! CmdHist call fzf#vim#command_history({'right': '40'})
+  nnoremap q: :CmdHist<CR>
+
+  " Better search history
+  command! QHist call fzf#vim#search_history({'right': '40'})
+  nnoremap q/ :QHist<CR>
+
+  command! -bang -nargs=* Ack call fzf#vim#ag(<q-args>, {'down': '40%', 'options': --no-color'})
+  " }}}
+else
+  " CtrlP fallback
+end
+
 " Tab setup
 set tabstop=4
 set shiftwidth=4
@@ -81,23 +113,12 @@ let g:haskell_backpack = 1
 autocmd TextChanged,TextChangedI <buffer> silent write
 
 "UI preferences
-colorscheme Atelier_EstuaryDark
+colorscheme neodark 
 set number
 set showcmd
 set cursorcolumn
 set cursorline
 filetype indent on
-
-" Syntastic config - disabled for now
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-" let g:syntastic_cpp_compiler = 'clang++'
-" let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 " Nerdtree config
 let NERDTreeMinimalUI=1
@@ -155,7 +176,6 @@ nnoremap K <C-W>k
 " Miscellaneous
 set mouse=a
 set nohlsearch
-set relativenumber
 
 " Ctags
 set tags=./tags,tags;$HOME

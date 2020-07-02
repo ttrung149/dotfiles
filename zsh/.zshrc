@@ -97,3 +97,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files'
+export FZF_CTRL_T_COMMAND='rg --hidden --no-ignore --files'
+
+alias ls='ls -la'
+alias _source='source ~/.zshrc'
+alias zshell='vim ~/.zshrc'
+
