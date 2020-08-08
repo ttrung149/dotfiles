@@ -104,7 +104,8 @@ source $ZSH/oh-my-zsh.sh
 export FZF_DEFAULT_COMMAND='find -L .'
 export FZF_CTRL_T_COMMAND='find -L .'
 
-alias ls='ls -la'
+# Aliases
+alias la='ls -la'
 alias _source='source ~/.zshrc'
 alias zshell='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'

@@ -2,8 +2,8 @@
 # Package install script for vim
 #==============================================================================
 
-# Copy .vimrc to ~
-cp .vimrc ~/.vimrc
+# Symlink .vimrc to ~
+ln -s $(pwd)/.vimrc ~/.vimrc
 
 # Install Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \

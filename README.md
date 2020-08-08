@@ -6,9 +6,16 @@ Personal collection of dotfiles (vimscript, zshell, etc)
 Have brew installed
 
 ### Install
-Vim install
+vim config install
 
 ```
 $ cd vim
+$ ./install.sh
+```
+
+zshell config install
+
+```
+$ cd zsh
 $ ./install.sh
 ```

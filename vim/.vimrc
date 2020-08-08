@@ -27,8 +27,8 @@ if executable('fzf')
   nnoremap q: :CmdHist<CR>
 
   " Better search history
-  command! QHist call fzf#vim#search_history({'right': '40'})
-  nnoremap q/ :QHist<CR>
+  "command! QHist call fzf#vim#search_history({'right': '40'})
+  "nnoremap q/ :QHist<CR>
 
   command! -bang -nargs=* Ack call fzf#vim#ag(<q-args>, {'down': '40%', 'options': --no-color'})
   " }}}
@@ -177,6 +177,7 @@ nnoremap K <C-W>k
 " Miscellaneous
 set mouse=a
 set nohlsearch
+noremap <C-c> <Esc>
 
 " Ctags
 set tags=./tags,tags;$HOME
